@@ -1,0 +1,247 @@
+\documentclass[12pt, a4paper]{article} %Dokumentinformationen/Präambel
+\usepackage{graphicx} %Paket für Bilder
+\usepackage{caption} %Paket für Bildunterschriften
+\usepackage[german]{babel} %Paket für Rechtschreibung
+\usepackage{listings}
+\usepackage{titlesec}
+\usepackage{tikz}
+\usepackage{float}
+\usetikzlibrary{tikzmark}
+\usetikzlibrary{matrix}
+\usepackage{array}
+\UseRawInputEncoding
+\usepackage{tabularx}
+\usepackage[hidelinks]{hyperref}
+
+
+% Für Quelltext
+\usepackage{listings}
+\usepackage{color}
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+\lstset{
+  keywordstyle=\color{blue},commentstyle=\color{mygreen},
+  stringstyle=\color{mymauve},rulecolor=\color{black},
+  basicstyle=\footnotesize\ttfamily,numberstyle=\tiny\color{mygray},
+  captionpos=b, % sets the caption-position to bottom
+  keepspaces=true, % keeps spaces in text
+  numbers=left, numbersep=5pt, showspaces=false,showstringspaces=true,
+  showtabs=false, stepnumber=2, tabsize=2, title=\lstname}
+
+\begin{document} %Beginn des eigentlichen Dokuments
+
+\thispagestyle{empty}
+
+%Beginn Titelseite
+
+\begin{title}
+	\centering{\scshape\Large Projektwoche 2022 am EMA \par}
+	\vspace{5cm}
+	
+	{\scshape\Huge Mein erstes LaTex Dokument \par}
+
+	\vspace{5cm}
+	{\Large\itshape Darius Auding \par} %Hier deinen Namen eintragen
+	
+
+\end{title}
+%Ende Titelseite
+
+\newpage
+
+\tableofcontents %erzeugt Inhaltsverzeichnis automatisch
+
+\newpage
+
+\section{\"Uber mich}\label{übermich}
+
+%Hier folgt eine Möglichkeit, etwas in LaTex aufzulisten
+\begin{description}
+\item[Name: Darius Auding] %Hier eintragen
+\item[Alter: 13] 
+\item[Hobbys: Geige spielen, Zocken, Progrmmieren, Zeichnen]
+\item[Lieblingsfach: Mathe, Chemie]
+\item[Lieblingsessen: -]
+\item[Lieblingsmusik: -]
+\item[] %Eigenen Punkt erstellen
+\end{description}
+
+\section{Bild in LaTex}{\label{Bild}}
+
+\includegraphics[height= 50mm]{cyberpunk man.jpg}
+%Lade im Internet ein Bild herunter, lade es in Overleaf hoch und binde es mit dem Befehl
+%	\includegraphics[height=50mm]{Dateiname}
+%in LaTex ein
+%Mit dem Befehl
+%	\caption{Bildunterschrift}
+%kannst du eine Bildunterschrift hinzufügen, z.B. die Quelle
+
+\begin{figure}[h]%h = here (t = top; b = bottom; p = page)
+\centering %Hier Befehl eingeben
+\end{figure}
+
+\section{Arten von Kapiteln}{\label{chapters}}
+
+Mit \verb|\section{Name}| beginnst du ein neues Kapitel, was automatisch im Inhaltsverzeichnis angezeigt wird, sofern der Befehl \verb|\tableofcontents| auf der entsprechenden Seite eingebunden ist.
+
+\subsection{Unterkapitel}{\label{chapters-1}}
+
+Mit \verb|\subsection{Name}| f\"ugst du ein Unterkapitel ein.
+
+\subsubsection{Unterunterkapitel}{\label{chapters-2}}
+
+Mit \verb|\subsubsection{Name}| f\"ugst du ein Unterunterkapitel ein.
+
+\section{Textgr\"o\ss e}{\label{fontsize}}
+
+%Im Dokumentkopf (Zeile 1) legst du die Default-Schriftgröße des Dokuments fest (hier sind das 12pt). Wenn du z.B. auf der Titelseite andere Schriftgrößen verwenden möchtest, 
+%helfen folgende Befehle.
+
+%Du änderst die Schriftgröße mit
+%	\Schriftgröße
+% Die Namen dieser Größen stehen in der Tabelle
+
+%Ersetze die 'x' in der Tabelle mit einem Wort in der entsprechenden Schriftart, welche links daneben steht
+
+
+\begin{table}[h] 
+\centering
+\begin{tabular}{l | l}
+\bf{Gr\"o\ss e} & \bf{Beispiel} \\
+\hline 
+Huge & x\\
+\hline
+huge & x\\
+\hline
+LARGE & x\\
+\hline
+Large & x\\
+\hline 
+large & x\\
+\hline
+normalsize & x\\
+\hline
+small & x\\
+\hline
+footnotesize & x\\
+\hline
+scriptsize & x\\
+\hline
+tiny & x\\
+\end{tabular}
+\caption{\label{tab4}Schriftgr\"o\ss en in LaTex }
+\end{table}
+
+\section{Textfarbe}{\label{textcolor}}
+
+%Erkundige dich im Internet, wie man Farben in LaTex ändern kann.
+%Markiere im folgenden Text beliebige Textpassagen rot, grün, cyan und gelb.
+
+\textcolor{mygreen}{Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+}
+\section{Schriftart}{\label{typeface}}
+
+%Informiere dich auf der Webseite
+%	https://de.overleaf.com/learn/latex/Font_sizes%2C_families%2C_and_styles#Font_families
+%wie man in LaTex die Schriftart ändern kann
+
+%Schreibe anschließend Passagen im folgenden Text mit folgenden Schriftarten: Roman (upright) serif , sans serif, typewriter (monospace)
+
+\texttt{Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.}
+
+
+\section{Quellcode}{\label{scourcecode}}
+%Mit dem Befehl
+%	\begin{lstlisting}[language=*Programmiersprache* ,caption=*Code Name*] ... \end{lstlisting}
+%fügst du Quellcode in LaTex ein. Wie du siehst, können die Programmiersprache und der Text unter dem Code
+%ausgewählt werden
+
+%Füge in diesem Kapitel entweder einen Quellcode deiner Wahl ein, oder kopiere den Quellcode aus dem Java-Programm im GitHub Ordner:
+
+\begin{lstlisting}[language=java]
+class HelloWorldApp {
+    public static void main(String[] args) {
+        System.out.println("Hello World!"); // Display the string.
+        for (int i = 0; i < 100; ++i) {
+            System.out.println(i);
+        }
+    }
+}
+\end{lstlisting}
+
+\section{Tabellen in LaTeX}{\label{tables}} % Tabellen mit und ohne linien , Größe von schriftgröße
+\subsection{Tabellen und linien}{\label{tables-1}}
+\begin{center}
+\begin{tabular}{c c c}
+     cell1 & cell2 & cell3 \\
+     cell4 & cell5 & cell6
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{c | c | c}
+     cell1 & cell2 & cell3 \\
+     cell4 & cell5 & cell6
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{c | c | c}
+     cell1 & cell2 & cell3\\
+     \hline
+     cell4 & cell5 & cell6
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{|m{3cm} | m{3cm} | m{3cm}|}
+    \hline
+    \multicolumn{3}{|c|}{Titel}         \\
+    \hline
+    cell4 & \multicolumn{2}{|c|}{cell5} \\
+    \hline
+    cell 6 & cell7 & cell8              \\
+    \hline
+\end{tabular}
+\end{center}
+
+\subsection{Tabellen mit fester Gr\"o{\ss}e}{\label{tables-2}}
+\begin{center} % feste Spaltenbreite
+\begin{tabular}{m{5em}| m{1cm} | m{1cm}}
+     cell1 & cell2 & cell3 \\
+     \hline
+     cell4 & cell5 & cell6
+\end{tabular}
+\end{center}
+\begin{tabularx}{0.8\textwidth} % gleichmäßg unterteilte spalten
+%\begin{tabularx}{0.8 --> legt größe fest -- \textwidth}
+  {| >{\raggedright\arraybackslash}X
+  | >{\centering\arraybackslash}X
+  | >{\raggedleft\arraybackslash}X}
+   item 11 & item 12 & item 13 \\
+ \hline
+ item 21  & item 22  & item 23  \\
+\end{tabularx}
+\par
+\newpage
+\begin{tabularx}{0.5\textwidth} % gleichmäßg unterteilte spalten
+%\begin{tabularx}{0.8 --> legt größe fest -- \textwidth}
+  {| >{\raggedright\arraybackslash}X
+  | >{\centering\arraybackslash}X
+  | >{\raggedleft\arraybackslash}X}
+   item 11 & item 12 & item 13 \\
+ \hline
+ item 21  & item 22  & item 23  \\
+\end{tabularx}
+\section{Verweise}{\label{references}}
+
+\subsection{Kapitelverweise}{\label{refrences-1}}
+hi Kapitel \ref{übermich} \\%Verweis auf über mich
+hi Kapitel \ref{references-2} %Verweis auf Links und Hyperlinks
+\subsection{Links und Hyperlinks}{\label{references-2}}
+\href{https:\\www.wikipedia.org}{Wikipedia link} \\
+\href{mailto:Darius.auding@ema.nrw.schule}{Link zu meiner E-Mail Adresse}
+
+
+\end{document}
