@@ -1,0 +1,162 @@
+\documentclass[50pt, a4paper]{article}
+\usepackage{graphicx} %Paket für Bilder
+\usepackage{caption} %Paket für Bildunterschriften
+\usepackage[german]{babel} %Paket für Rechtschreibung
+\usepackage{listings}
+\usepackage{titlesec}
+\usepackage{tikz}
+\usepackage{float}
+\usetikzlibrary{tikzmark}
+\usetikzlibrary{matrix}
+\usepackage{array}
+\UseRawInputEncoding
+
+% Für Quelltext
+\usepackage{listings}
+\usepackage{color}
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+\definecolor{pinguin}{rgb}{2.55,2.18,0.35}
+\definecolor{leopard}{rgb}{204,0,0}
+\lstset{
+  keywordstyle=\color{blue},commentstyle=\color{mygreen},
+  stringstyle=\color{mymauve},rulecolor=\color{black},
+  basicstyle=\footnotesize\ttfamily,numberstyle=\tiny\color{mygray},
+  captionpos=b, % sets the caption-position to bottom
+  keepspaces=true, % keeps spaces in text
+  numbers=left, numbersep=5pt, showspaces=false,showstringspaces=true,
+  showtabs=false, stepnumber=2, tabsize=2, title=\lstname}
+  
+\begin{document}
+\thispagestyle{empty}
+
+%Beginn Titelseite
+\begin{title}
+	
+	\centering{\scshape\Large Ein guter Artikel \par}
+	\vspace{5cm}
+	
+	{\scshape\Huge Eine Studie \"uber Pinguine und Straciatella-Jogurt \par}
+
+	\vspace{5cm}
+	{\Large\itshape Mats Henrik Icking \par}
+    {\Large\itshape Jonathan Theodor Kr\"uger (aka. Pinguin) \par}	
+
+
+\end{title}
+%Ende Titelseite
+
+% Die Namen dieser Größen stehen in der Tabelle
+
+%Ersetze die 'x' in der Tabelle mit einem Wort in der entsprechenden Schriftart, welche links daneben steht
+
+
+\begin{table}[h] 
+\centering
+\newpage
+
+\tableofcontents %erzeugt Inhaltsverzeichnis automatisch
+
+\newpage]
+
+\item[ Außerdem geht es um das Agressionsverhalten von Leoparden]
+
+
+\section{\"Uber die Studie}
+
+\begin{description}
+\item[\par In dieser Studie wird es um das verhalten von Pinguinen wenn sie ganz viel sehr leckeren Stracialatella-Jogurt gegessen haben!
+\end{description}
+
+\section{Leoparden, wenn sie Pinguine gegessen haben, die voher Johguhrt gegessen haben und ein Nazi in der N\"ahe ist.}
+
+%Lade im Internet ein Bild herunter, lade es in Overleaf hoch und binde es mit dem Befehl
+\includegraphics[height=90mm]{coolesBild.png}
+%in LaTex ein
+%Mit dem Befehl
+%	\caption{Bildunterschrift}
+%kannst du eine Bildunterschrift hinzufügen, z.B. die Quelle
+
+\begin{figure}[h]%h = here (t = top; b = bottom; p = page)
+\centering %Hier Befehl eingeben
+\end{figure}
+
+\section{Arten von Kapiteln}
+
+Mit \verb|\section{Name}| beginnst du ein neues Kapitel, was automatisch im Inhaltsverzeichnis angezeigt wird, sofern der Befehl \verb|\tableofcontents| auf der entsprechenden Seite eingebunden ist.
+
+\subsection{abcdefghijiklmnopqrstuwvyxz}
+
+Mit \verb|\subsection{Name}| f\"ugst du ein Unterkapitel ein.
+
+\subsubsection{Unterunterkapitel}
+
+Mit \verb|\subsubsection{Name}| f\"ugst du ein Unterunterkapitel ein.
+
+\section{Textgr\"o\ss e}
+
+%Im Dokumentkopf (Zeile 1) legst du die Default-Schriftgröße des Dokuments fest (hier sind das 12pt). Wenn du z.B. auf der Titelseite andere Schriftgrößen verwenden möchtest, 
+%helfen folgende Befehle.
+
+%Du änderst die Schriftgröße mit
+%	\Schriftgröße
+\begin{tabular}{l | l}
+\bf{Gr\"o\ss e} & \bf{Beispiel} \\
+\hline 
+Huge & S\\
+\hline
+huge & x\\
+\hline
+LARGE & x\\
+\hline
+Large & x\\
+\hline 
+large & x\\
+\hline
+AFD & = schlecht\\
+\hline
+AFD & = BILD\\
+\hline
+footnotesize & x\\
+\hline
+scriptsize & x\\
+\hline
+tiny & x\\
+\end{tabular}
+\caption{\label{tab4}Die AFD }
+\end{table}
+
+\section{Textfarbe}
+
+%Erkundige dich im Internet, wie man Farben in LaTex ändern kann.
+%Markiere im folgenden Text beliebige Textpassagen rot, grün, cyan und gelb.
+
+\textcolor{green}{Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.}
+\textcolor{pinguin}{Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.}
+
+\section{Schriftart}
+
+%Informiere dich auf der Webseite
+%	https://de.overleaf.com/learn/latex/Font_sizes%2C_families%2C_and_styles#Font_families
+%wie man in LaTex die Schriftart ändern kann
+
+%Schreibe anschließend Passagen im folgenden Text mit folgenden Schriftarten: Roman (upright) serif , sans serif, typewriter (monospace)
+
+\textcolor{leopard}{Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.}  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+
+
+\section{Quellcode}
+
+%Mit dem Befehl
+%	\begin{lstlisting}[language=*Programmiersprache* ,caption=*Code Name*] ... \end{lstlisting}
+%fügst du Quellcode in LaTex ein. Wie du siehst, können die Programmiersprache und der Text unter dem Code
+%ausgewählt werden
+%Füge in diesem Kapitel entweder einen Quellcode deiner Wahl ein, oder kopiere den Quellcode aus dem Java-Programm im GitHub Ordner:
+
+\begin{description}
+\subsection{Dies ist eine Subsection}
+\item{Dies ist ein Item} Ist dies ein Text
+\end{description}
+
+\end{document}
