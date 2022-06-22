@@ -1,2 +1,2 @@
 # LaTeX-pull
-für pull requests während der Projektwoche 2022
+Für pull requests während der Projektwoche 2022
