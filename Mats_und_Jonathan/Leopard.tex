@@ -5,7 +5,6 @@
 \usepackage{listings}
 \usepackage{titlesec}
 \usepackage{tikz}
-\usepackage{listings}
 \usepackage{float}
 \usetikzlibrary{tikzmark}
 \usetikzlibrary{matrix}
@@ -35,49 +34,45 @@
 %Beginn Titelseite
 \begin{title}
 	
-	\centering{\scshape\Large Projektwoche 2022 am EMA \par}
+	\centering{\scshape\Large Ein guter Artikel \par}
 	\vspace{5cm}
 	
-	{\scshape\Huge Mein erstes LaTex Dokument \par}
+	{\scshape\Huge Eine Studie \"uber Pinguine und Straciatella-Jogurt \par}
 
 	\vspace{5cm}
 	{\Large\itshape Mats Henrik Icking \par}
-    {\Large\itshape Jonathan Theodor Kr\"uger \par}	
+    {\Large\itshape Jonathan Theodor Kr\"uger (aka. Pinguin) \par}	
 
 
 \end{title}
 %Ende Titelseite
 
+% Die Namen dieser Größen stehen in der Tabelle
+
+%Ersetze die 'x' in der Tabelle mit einem Wort in der entsprechenden Schriftart, welche links daneben steht
+
+
+\begin{table}[h] 
+\centering
 \newpage
 
 \tableofcontents %erzeugt Inhaltsverzeichnis automatisch
 
-\newpage
+\newpage]
 
-\section{\"Uber mich}
+\item[ Außerdem geht es um das Agressionsverhalten von Leoparden]
 
-%Hier folgt eine Möglichkeit, etwas in LaTex aufzulisten
+
+\section{\"Uber die Studie}
+
 \begin{description}
-\item[Name.]
- Mats 
-\item[Alter.] 
-12
-\item[Hobbys.]
-Ich bin Hobbylos
-\item[Lieblingsfach.]
-
-\item[Lieblingsessen.]
-
-\item[Lieblingsmusik.]
-
-\item[Dies ist ein eigener Punkt] Dies ist ein Text
-
+\item[\par In dieser Studie wird es um das verhalten von Pinguinen wenn sie ganz viel sehr leckeren Stracialatella-Jogurt gegessen haben!
 \end{description}
 
-\section{Bild in LaTex}
+\section{Leoparden, wenn sie Pinguine gegessen haben, die voher Johguhrt gegessen haben und ein Nazi in der N\"ahe ist.}
 
 %Lade im Internet ein Bild herunter, lade es in Overleaf hoch und binde es mit dem Befehl
-\includegraphics[height=50mm]{coolesBild.png}
+\includegraphics[height=90mm]{coolesBild.png}
 %in LaTex ein
 %Mit dem Befehl
 %	\caption{Bildunterschrift}
@@ -91,9 +86,9 @@ Ich bin Hobbylos
 
 Mit \verb|\section{Name}| beginnst du ein neues Kapitel, was automatisch im Inhaltsverzeichnis angezeigt wird, sofern der Befehl \verb|\tableofcontents| auf der entsprechenden Seite eingebunden ist.
 
-\subsection{HEHEHEHAW}
+\subsection{abcdefghijiklmnopqrstuwvyxz}
 
-Mit \verb|\subsection{Name}| f\"ug st du ein Unterkapitel ein.
+Mit \verb|\subsection{Name}| f\"ugst du ein Unterkapitel ein.
 
 \subsubsection{Unterunterkapitel}
 
@@ -106,13 +101,6 @@ Mit \verb|\subsubsection{Name}| f\"ugst du ein Unterunterkapitel ein.
 
 %Du änderst die Schriftgröße mit
 %	\Schriftgröße
-% Die Namen dieser Größen stehen in der Tabelle
-
-%Ersetze die 'x' in der Tabelle mit einem Wort in der entsprechenden Schriftart, welche links daneben steht
-
-
-\begin{table}[h] 
-\centering
 \begin{tabular}{l | l}
 \bf{Gr\"o\ss e} & \bf{Beispiel} \\
 \hline 
@@ -170,49 +158,5 @@ tiny & x\\
 \subsection{Dies ist eine Subsection}
 \item{Dies ist ein Item} Ist dies ein Text
 \end{description}
-
-\begin{apendix}
-
-\section{Anhang Code}
-\begin{lstlisting}[language=c, caption= cooler Code]
-    // CPP program for fast inverse square root.
-    #include<bits/stdc++.h>
-    using namespace std;
-    
-    // function to find the inverse square root
-    float inverse_rsqrt( float number )
-    {
-    const float threehalfs = 1.5F;
-    
-    float x2 = number * 0.5F;
-    float y = number;
-    
-    // evil floating point bit level hacking
-    long i = * ( long * ) &y;
-    
-    // value is pre-assumed
-    i = 0x5f3759df - ( i >> 1 );
-    y = * ( float * ) &i;
-    
-    // 1st iteration
-    y = y * ( threehalfs - ( x2 * y * y ) );
-    
-    // 2nd iteration, this can be removed
-    // y = y * ( threehalfs - ( x2 * y * y ) );
-    
-    return y;
-    }
-    // driver code
-    int main(){
-    
-    int n = 256;
-    float f = invers_rsqrt(n);
-    cout << f << endl;
-    
-    return 0;
-    }}
-\end{lstlisting}
-
-\end{apendix}
 
 \end{document}
